@@ -5,6 +5,9 @@ import com.codegym.models.Supplier;
 import com.codegym.services.MaterialService;
 import com.codegym.services.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -22,8 +25,8 @@ public class SupplierController {
     private MaterialService materialService;
 
     @GetMapping("/suppliers")
-    public ModelAndView listSuppliers(){
-        Iterable<Supplier> suppliers = supplierService.findAll();
+    public ModelAndView listSuppliers(@PageableDefault(size = 5, sort = "name") Pageable pageable){
+        Page<Supplier> suppliers = supplierService.findAll(pageable);
         ModelAndView modelAndView = new ModelAndView("/supplier/list");
         modelAndView.addObject("suppliers", suppliers);
         return modelAndView;

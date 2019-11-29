@@ -1,9 +1,11 @@
 package com.codegym.services;
 
 import com.codegym.models.Supplier;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 public interface SupplierService {
-    Iterable<Supplier> findAll();
+    Page<Supplier> findAll(Pageable pageable);
 
     Supplier findById(Long id);
 

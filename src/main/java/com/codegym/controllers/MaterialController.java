@@ -23,8 +23,8 @@ public class MaterialController {
     private SupplierService supplierService;
 
     @ModelAttribute("suppliers")
-    public Iterable<Supplier> suppliers(){
-        return supplierService.findAll();
+    public Page<Supplier> suppliers(Pageable pageable){
+        return supplierService.findAll(pageable);
     }
 
     @GetMapping("/create-material")

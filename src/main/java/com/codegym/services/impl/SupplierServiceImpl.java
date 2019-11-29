@@ -4,6 +4,8 @@ import com.codegym.models.Supplier;
 import com.codegym.repositories.SupplierRepository;
 import com.codegym.services.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 public class SupplierServiceImpl implements SupplierService {
     @Autowired
@@ -11,8 +13,8 @@ public class SupplierServiceImpl implements SupplierService {
 
 
     @Override
-    public Iterable<Supplier> findAll() {
-        return supplierRepository.findAll();
+    public Page<Supplier> findAll(Pageable pageable) {
+        return supplierRepository.findAll(pageable);
     }
 
     @Override
