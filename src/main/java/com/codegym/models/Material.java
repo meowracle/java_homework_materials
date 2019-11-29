@@ -2,6 +2,7 @@ package com.codegym.models;
 
 
 import javax.persistence.*;
+import java.sql.Date;
 
 @Entity
 @Table(name = "materials")
@@ -15,6 +16,7 @@ public class Material {
     @ManyToOne
     @JoinColumn(name = "supplier_id")
     private Supplier supplier;
+    private Date importDate;
     private Integer quantity;
     private String description;
     private String image;
@@ -22,10 +24,12 @@ public class Material {
     public Material() {
     }
 
-    public Material(String name, Integer price, Supplier supplier, Integer quantity, String description, String image) {
+
+    public Material(String name, Integer price, Supplier supplier, Date importDate, Integer quantity, String description, String image) {
         this.name = name;
         this.price = price;
         this.supplier = supplier;
+        this.importDate = importDate;
         this.quantity = quantity;
         this.description = description;
         this.image = image;
@@ -61,6 +65,14 @@ public class Material {
 
     public void setSupplier(Supplier supplier) {
         this.supplier = supplier;
+    }
+
+    public Date getImportDate() {
+        return importDate;
+    }
+
+    public void setImportDate(Date importDate) {
+        this.importDate = importDate;
     }
 
     public Integer getQuantity() {

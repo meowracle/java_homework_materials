@@ -24,6 +24,7 @@
         <th>Price</th>
         <th>Supplier</th>
         <th>Quantity</th>
+        <th>Import date</th>
         <th>Description</th>
         <th>Image</th>
     </tr>
@@ -33,6 +34,7 @@
             <td th:text="${material.price}"></td>
             <td th:text="${material.supplier.name}"></td>
             <td th:text="${material.quantity}"></td>
+            <td th:text="${material.importDate}"></td>
             <td th:text="${material.description}"></td>
             <td><img width="168px" height="168px" th:src="${material.image}"></td>
             <td><a th:href="@{/edit-material/__${material.id}__ }">Edit</a></td>

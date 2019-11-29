@@ -982,63 +982,68 @@
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="247" parent="236" name="FKnl3knknv8xt09ve03v2vfqubx">
+    <column id="247" parent="236" name="importDate">
+      <Position>8</Position>
+      <DataType>date|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="248" parent="236" name="FKnl3knknv8xt09ve03v2vfqubx">
       <ColNames>supplier_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="248" parent="236" name="PRIMARY">
+    <key id="249" parent="236" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="249" parent="237" name="id">
+    <column id="250" parent="237" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="237" name="address">
+    <column id="251" parent="237" name="address">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="237" name="description">
+    <column id="252" parent="237" name="description">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="237" name="name">
+    <column id="253" parent="237" name="name">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="253" parent="237" name="PRIMARY">
+    <key id="254" parent="237" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="254" parent="238" name="Supplier_id">
+    <column id="255" parent="238" name="Supplier_id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="238" name="materials_id">
+    <column id="256" parent="238" name="materials_id">
       <Position>2</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="256" parent="238" name="UK_evccqq1g9y8lavp4pywep3xsm">
+    <index id="257" parent="238" name="UK_evccqq1g9y8lavp4pywep3xsm">
       <ColNames>materials_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="257" parent="238" name="FK8esrl5mxmvw7622t4ydrlib8e">
+    <index id="258" parent="238" name="FK8esrl5mxmvw7622t4ydrlib8e">
       <ColNames>Supplier_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="258" parent="238" name="UK_evccqq1g9y8lavp4pywep3xsm">
+    <key id="259" parent="238" name="UK_evccqq1g9y8lavp4pywep3xsm">
       <ColNames>materials_id</ColNames>
       <UnderlyingIndexName>UK_evccqq1g9y8lavp4pywep3xsm</UnderlyingIndexName>
     </key>
